@@ -29,16 +29,15 @@ const Profile = () => {
 
   return (
     <div className="profile-page">
-      <h2>User Profile</h2>
       {userData ? (
         <div className="profile-details">
-          <p>Name: {userData.name}</p>
-          <p>Email: {userData.email}</p>
-          <p>Cart Data: {JSON.stringify(userData.cartData)}</p>
-          {/* You can display more user data if needed */}
+          <span class="block text-sm text-gray-900 ">{userData.name}</span>
+          <span class="block text-sm  text-gray-500 truncate ">
+            {userData.email}
+          </span>
         </div>
       ) : (
-        <div>Please log in to view your profile.</div>
+        <div></div>
       )}
     </div>
   );

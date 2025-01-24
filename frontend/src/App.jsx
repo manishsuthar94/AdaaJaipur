@@ -17,7 +17,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Verify from "./pages/Verify";
 import Wishlist from "./pages/Wishlist";
 import PageNotFound from "./pages/PageNotFound";
-import Profile from "./pages/Profile";
 
 const App = () => {
   return (
@@ -37,8 +36,7 @@ const App = () => {
         <Route path="/orders" element={<Orders />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="*" element={<PageNotFound/>} />
-        <Route path="/profile" element={<Profile/>} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>

@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
+import Profile from "../pages/Profile";
+import { IoIosLogOut } from "react-icons/io";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -68,23 +70,32 @@ const Navbar = () => {
           />
           {/* Dropdown Menu */}
           {token && (
-            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
-              <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
-                <p
-                  className="cursor-pointer hover:text-black"
-                  onClick={() => navigate("/profile")}
-                >
-                  My Profile
-                </p>
-                <p
-                  onClick={() => navigate("/orders")}
-                  className="cursor-pointer hover:text-black"
-                >
-                  Orders
-                </p>
-                <p onClick={logout} className="cursor-pointer hover:text-black">
-                  Logout
-                </p>
+            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-2">
+              <div
+                class="z-50 my-4 text-base list-none bg-slate-100 divide-y divide-gray-100 rounded-lg shadow-sm "
+                id="user-dropdown"
+              >
+                <div class="px-4 py-3">
+                  <Profile />
+                </div>
+                <ul class="py-2" aria-labelledby="user-menu-button">
+                  <li>
+                    <Link
+                      to={"/orders"}
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                    >
+                      Orders
+                    </Link>
+                  </li>
+                  <li>
+                    <p
+                      onClick={logout}
+                      class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer "
+                    >
+                      Logout <IoIosLogOut className="ml-2 font-extrabold" />
+                    </p>
+                  </li>
+                </ul>
               </div>
             </div>
           )}
