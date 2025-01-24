@@ -87,7 +87,7 @@ const Product = () => {
           <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-4">
             <button
               onClick={() => addToCart(productData._id, size)}
-              className="bg-slate-800 text-white px-6 py-3 text-sm sm:text-base font-medium rounded-lg shadow-md hover:bg-gray-800 active:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all w-full sm:w-auto flex items-center gap-2"
+              className="bg-slate-800 text-white px-6 py-3 text-sm sm:text-base font-medium rounded-lg shadow-md hover:bg-gray-800 active:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all w-full sm:w-auto flex items-center justify-center gap-2"
             >
               <LuShoppingCart className="w-6 h-6" />
               <span>ADD TO CART</span>
@@ -95,7 +95,7 @@ const Product = () => {
 
             <button
               onClick={() => addToWishlist(productData)}
-              className="bg-[#866528] text-white px-6 py-3 text-sm sm:text-base font-medium rounded-lg shadow-md hover:bg-yellow-800 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-all w-full sm:w-auto flex items-center gap-2"
+              className="bg-[#866528] text-white px-6 py-3 text-sm sm:text-base font-medium rounded-lg shadow-md hover:bg-yellow-800 active:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-all w-full sm:w-auto flex items-center justify-center gap-2"
             >
               <FaRegHeart className="w-6 h-6" />
               <span>ADD TO WISHLIST</span>
