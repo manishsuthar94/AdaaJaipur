@@ -70,7 +70,7 @@ const Navbar = () => {
           />
           {/* Dropdown Menu */}
           {token && (
-            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-2">
+            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-2 z-50">
               <div
                 class="z-50 my-4 text-base list-none bg-slate-100 divide-y divide-gray-100 rounded-lg shadow-sm "
                 id="user-dropdown"

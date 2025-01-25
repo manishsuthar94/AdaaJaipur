@@ -56,6 +56,7 @@ import p_img52 from "./p_img52.png";
 
 import logo from "./logo.png";
 import icon from "./icon.webp";
+import contact_banner from "./contact_banner.png";
 import hero_img from "./hero_img.png";
 import hero_img2 from "./hero_img2.jpg";
 import hero_img1 from "./hero_img1.jpg";
@@ -81,6 +82,7 @@ export const assets = {
   logo,
   hero_img1,
   hero_img2,
+  contact_banner,
   icon,
   hero_img,
   cart_icon,

@@ -167,17 +167,11 @@ const Contact = () => {
             <p class="font-medium text-blue-500">Contact us</p>
 
             <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl ">
-            Just Reached to Us
+              Just Reached to Us
             </h1>
 
             <p class="mt-3 text-gray-500 ">Chat to our friendly team.</p>
           </div>
-
-          <img
-            class="object-cover w-full h-64 mt-10 rounded-lg lg:h-96"
-            src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=100"
-            alt=""
-          />
 
           <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3 sm:grid-cols-2 ">
             <div class="p-4 rounded-lg bg-blue-50 md:p-6">
@@ -268,6 +262,11 @@ const Contact = () => {
               <p class="mt-2 text-sm text-blue-500">+91 98281 70003</p>
             </div>
           </div>
+          <img
+            className="object-cover w-full h-64 mt-24 rounded-lg lg:h-[22rem] hidden sm:block"
+            src={assets.contact_banner}
+            alt=""
+          />
         </div>
       </section>
 
