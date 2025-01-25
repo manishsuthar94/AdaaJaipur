@@ -97,8 +97,3 @@ Adaa-Jaipur is a comprehensive e-commerce platform designed to provide a seamles
 
 ---
 
-## How to Run Locally:
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-repository-name.git
-   cd your-repository-name
