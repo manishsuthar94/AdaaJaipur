@@ -4,7 +4,8 @@ import { assets } from "../assets/assets";
 import { useLocation } from "react-router-dom";
 
 const SearchBar = () => {
-  const { search, setSearch, showSearch, setShowSearch, products } = useContext(ShopContext); // Assuming `products` is in the context
+  const { search, setSearch, showSearch, setShowSearch, products } =
+    useContext(ShopContext); // Assuming `products` is in the context
   const [visible, setVisible] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const [highlightIndex, setHighlightIndex] = useState(-1); // For arrow key navigation
@@ -61,7 +62,10 @@ const SearchBar = () => {
   };
 
   return showSearch && visible ? (
-    <div className="border-t border-b bg-gray-50 text-center relative" ref={searchRef}>
+    <div
+      className="border-t border-b bg-gray-50 text-center relative"
+      ref={searchRef}
+    >
       <div
         className="inline-flex items-center justify-center border border-gray-400 px-5 py-2 my-5 mx-3 rounded-full w-3/4 sm:w-1/2"
         onKeyDown={handleKeyDown}
@@ -76,11 +80,18 @@ const SearchBar = () => {
         <img className="w-4" src={assets.search_icon} alt="Search Icon" />
       </div>
       <img
-        onClick={() => setShowSearch(false)}
+        onClick={() => {
+          if (search.trim() === "") {
+            setShowSearch(false); // Close the search bar if input is empty
+          } else {
+            setSearch(""); // Clear the search input
+          }
+        }}
         className="inline w-3 cursor-pointer"
         src={assets.cross_icon}
         alt="Close Icon"
       />
+
       {/* Scrollable Suggestions Dropdown */}
       {suggestions.length > 0 && (
         <div className="absolute left-1/2 transform -translate-x-1/2 bg-white border border-gray-300 rounded-md shadow-lg max-w-xs w-full mt-2 z-10 max-h-48 overflow-y-auto">
@@ -94,15 +105,17 @@ const SearchBar = () => {
                 onClick={() => handleSelect(item)} // Hide suggestions only
               >
                 {/* Highlight search match */}
-                {item.name.split(new RegExp(`(${search})`, "gi")).map((part, i) =>
-                  part.toLowerCase() === search.toLowerCase() ? (
-                    <span key={i} className="text-blue-500 font-semibold">
-                      {part}
-                    </span>
-                  ) : (
-                    part
-                  )
-                )}
+                {item.name
+                  .split(new RegExp(`(${search})`, "gi"))
+                  .map((part, i) =>
+                    part.toLowerCase() === search.toLowerCase() ? (
+                      <span key={i} className="text-blue-500 font-semibold">
+                        {part}
+                      </span>
+                    ) : (
+                      part
+                    )
+                  )}
               </li>
             ))}
           </ul>
