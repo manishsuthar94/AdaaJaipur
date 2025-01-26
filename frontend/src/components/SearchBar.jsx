@@ -87,7 +87,7 @@ const SearchBar = () => {
             setSearch(""); // Clear the search input
           }
         }}
-        className="inline w-3 cursor-pointer"
+        className="inline w-[17px] cursor-pointer"
         src={assets.cross_icon}
         alt="Close Icon"
       />
@@ -100,7 +100,11 @@ const SearchBar = () => {
               <li
                 key={item.id}
                 className={`px-4 py-2 cursor-pointer ${
-                  index === highlightIndex ? "bg-gray-200" : "hover:bg-gray-100"
+                  index % 2 === 0 ? "bg-gray-50" : "bg-gray-200"
+                } ${
+                  index === highlightIndex
+                    ? "bg-gray-300"
+                    : "hover:bg-slate-100"
                 }`}
                 onClick={() => handleSelect(item)} // Hide suggestions only
               >
