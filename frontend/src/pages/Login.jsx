@@ -3,14 +3,17 @@ import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Login");
   const { token, setToken, navigate, backendUrl } = useContext(ShopContext);
 
   const [name, setName] = useState("");
-  const [password, setPasword] = useState("");
+  const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -61,18 +64,23 @@ const Login = () => {
         onSubmit={onSubmitHandler}
         className="flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800"
       >
-        <div className="inline-flex items-center gap-2 mb-2 mt-10">
-          <p className="prata-regular text-3xl">{currentState}</p>
-          <hr className="border-none h-[1.5px] w-8 bg-gray-800" />
+        <div className="text-center mb-6">
+          <h2 className="text-3xl font-bold text-gray-800">
+            {currentState === "Login" ? "Welcome Back!" : "Create Account"}
+          </h2>
+          <p className="text-gray-500 text-base">
+            {currentState === "Login"
+              ? "Please sign in to your account"
+              : "Join us by creating an account"}
+          </p>
         </div>
-        {currentState === "Login" ? (
-          ""
-        ) : (
+
+        {currentState === "Login" ? null : (
           <input
             onChange={(e) => setName(e.target.value)}
             value={name}
             type="text"
-            className="w-full px-3 py-2 border border-gray-800"
+            className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
             placeholder="Name"
             required
           />
@@ -81,39 +89,53 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           type="email"
-          className="w-full px-3 py-2 border border-gray-800"
+          className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
           placeholder="Email"
           required
         />
-        <input
-          onChange={(e) => setPasword(e.target.value)}
-          value={password}
-          type="password"
-          className="w-full px-3 py-2 border border-gray-800"
-          placeholder="Password"
-          required
-        />
-        <div className="w-full flex justify-between text-sm mt-[-8px]">
-          <p className=" cursor-pointer">Forgot your password?</p>
+        <div className="relative w-full">
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+            type={showPassword ? "text" : "password"}
+            className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+            placeholder="Password"
+            required
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute inset-y-0 right-3 flex items-center text-gray-600"
+          >
+            {showPassword ? (
+              <MdOutlineRemoveRedEye className="text-xl" />
+            ) : (
+              <FaRegEyeSlash className="text-xl" />
+            )}
+          </button>
+        </div>
+        <button className="w-full text-white bg-slate-700 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mb-3 mt-2">
+          {currentState === "Login" ? "Sign In" : "Sign Up"}
+        </button>
+        <div className="w-full flex justify-between text-base mt-[-8px]">
           {currentState === "Login" ? (
             <p
               onClick={() => setCurrentState("Sign Up")}
-              className=" cursor-pointer"
+              className="cursor-pointer flex"
             >
-              Create account
+              New to AdaaJaipur?{" "}
+              <p className="ml-1 text-blue-600">Create account</p>
             </p>
           ) : (
             <p
               onClick={() => setCurrentState("Login")}
-              className=" cursor-pointer"
+              className="cursor-pointer flex"
             >
-              Login Here
+              Already have an account?{" "}
+              <p className="ml-1 text-blue-600">Login Here</p>
             </p>
           )}
         </div>
-        <button className="bg-black text-white font-light px-8 py-2 mt-4">
-          {currentState === "Login" ? "Sign In" : "Sign Up"}
-        </button>
       </form>
     </>
   );
