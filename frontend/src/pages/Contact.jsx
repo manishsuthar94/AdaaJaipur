@@ -262,10 +262,15 @@ const Contact = () => {
               <p class="mt-2 text-sm text-blue-500">+91 98281 70003</p>
             </div>
           </div>
-          <img
-            className="object-cover w-full h-64 mt-24 rounded-lg lg:h-[22rem] hidden sm:block"
-            src={assets.contact_banner}
-            alt=""
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56948.26314582237!2d75.73714806266777!3d26.863274478938504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5d69821715b%3A0x90205ef69828a6d5!2sAdaa%20Jaipur!5e0!3m2!1sen!2sin!4v1737868582507!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            className="w-full h-64 mt-24 rounded-lg lg:h-[22rem] "
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           />
         </div>
       </section>
