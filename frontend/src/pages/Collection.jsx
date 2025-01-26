@@ -3,7 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
-
+import { useLocation } from "react-router-dom"; // To get query params
 const Collection = () => {
   const { products, search, showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
@@ -11,8 +11,18 @@ const Collection = () => {
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState("relavent");
-  const [currentPage, setCurrentPage] = useState(1); // Current page
-  const itemsPerPage = 8; // Items per page
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+
+  const location = useLocation(); // To get the current URL
+  const queryParams = new URLSearchParams(location.search);
+  const initialCategory = queryParams.get("category"); // Get category from URL
+
+  useEffect(() => {
+    if (initialCategory) {
+      setCategory([initialCategory]); // Set category from query param
+    }
+  }, [initialCategory]);
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
@@ -140,6 +150,7 @@ const Collection = () => {
                 <input
                   value={"Men"}
                   onChange={toggleCategory}
+                  checked={category.includes("Men")}
                   id="ripple-on"
                   type="checkbox"
                   class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
@@ -178,6 +189,7 @@ const Collection = () => {
                 <input
                   value={"Women"}
                   onChange={toggleCategory}
+                  checked={category.includes("Women")}
                   id="ripple-on"
                   type="checkbox"
                   class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
@@ -216,6 +228,7 @@ const Collection = () => {
                 <input
                   value={"Kids"}
                   onChange={toggleCategory}
+                  checked={category.includes("Kids")}
                   id="ripple-on"
                   type="checkbox"
                   class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"

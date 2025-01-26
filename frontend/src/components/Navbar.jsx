@@ -31,7 +31,7 @@ const Navbar = () => {
         <img src={assets.icon} className="w-32" alt="" />
       </Link>
 
-      <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
+      <ul className="hidden lg:flex gap-5 text-sm text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
           <p>HOME</p>
           <hr className="w-2/4 border-none h-[1.6px] bg-gray-700 hidden" />
@@ -39,6 +39,24 @@ const Navbar = () => {
         <NavLink to="/collection" className="flex flex-col items-center gap-1">
           <p>COLLECTION</p>
           <hr className="w-2/4 border-none h-[1.6px] bg-gray-700 hidden" />
+        </NavLink>
+        <NavLink
+          to="/collection?category=Men"
+          className="flex flex-col items-center gap-1"
+        >
+          <p>MEN</p>
+        </NavLink>
+        <NavLink
+          to="/collection?category=Women"
+          className="flex flex-col items-center gap-1"
+        >
+          <p>WOMEN</p>
+        </NavLink>
+        <NavLink
+          to="/collection?category=Kids"
+          className="flex flex-col items-center gap-1"
+        >
+          <p>KIDS</p>
         </NavLink>
         <NavLink to="/about" className="flex flex-col items-center gap-1">
           <p>ABOUT US</p>
@@ -120,7 +138,7 @@ const Navbar = () => {
         <img
           onClick={() => setVisible(true)}
           src={assets.menu_icon}
-          className="w-5 cursor-pointer sm:hidden"
+          className="w-5 cursor-pointer lg:hidden"
           alt=""
         />
       </div>
@@ -153,6 +171,29 @@ const Navbar = () => {
           >
             COLLECTION
           </NavLink>
+
+          <Link
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 border"
+            to="/collection?category=Men"
+          >
+            MEN
+          </Link>
+          <Link
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 border"
+            to="/collection?category=Women"
+          >
+            WOMEN
+          </Link>
+          <Link
+            onClick={() => setVisible(false)}
+            className="py-2 pl-6 border"
+            to="/collection?category=Kids"
+          >
+            KIDS
+          </Link>
+
           <NavLink
             onClick={() => setVisible(false)}
             className="py-2 pl-6 border"
