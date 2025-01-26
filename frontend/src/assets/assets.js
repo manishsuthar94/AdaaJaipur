@@ -77,6 +77,7 @@ import razorpay_logo from "./razorpay_logo.png";
 import stripe_logo from "./stripe_logo.png";
 import cross_icon from "./cross_icon.png";
 import heart from "./heart.png";
+import home_offer from "./home_offer.gif"
 
 export const assets = {
   logo,
@@ -84,6 +85,7 @@ export const assets = {
   hero_img2,
   contact_banner,
   icon,
+  home_offer,
   hero_img,
   cart_icon,
   dropdown_icon,
