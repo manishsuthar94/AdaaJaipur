@@ -21,6 +21,9 @@ const Footer = () => {
           <ul className="flex flex-col gap-1 text-gray-600">
             <Link to={"/"}>Home</Link>
             <Link to={"/collection"}>Collection</Link>
+            <Link to="/collection?category=Men">Men</Link>
+            <Link to="/collection?category=Women">Women</Link>
+            <Link to="/collection?category=Kids">Kids</Link>
             <Link to={"/about"}>About Us</Link>
             <Link to={"/contact"}>Contact Us</Link>
           </ul>
