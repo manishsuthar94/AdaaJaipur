@@ -78,10 +78,14 @@ import stripe_logo from "./stripe_logo.png";
 import cross_icon from "./cross_icon.png";
 import heart from "./heart.png";
 import home_offer from "./home_offer.gif"
+import Founders1 from "./Founders1.webp"
+import Founders2 from "./Founders2.webp"
 
 export const assets = {
   logo,
   hero_img1,
+  Founders1,
+  Founders2,
   hero_img2,
   contact_banner,
   icon,

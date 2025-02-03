@@ -180,12 +180,12 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4 mt-8">
               <img
                 className="w-full rounded-lg"
-                src="https://adaajaipur.com/cdn/shop/files/Founders1.png?v=1706981151&width=3200"
+                src={assets.Founders1}
                 alt="office content 1"
               />
               <img
                 className="mt-4 w-full lg:mt-10 rounded-lg"
-                src="https://adaajaipur.com/cdn/shop/files/Founders2.png?v=1706981151&width=3200"
+                src={assets.Founders2}
                 alt="office content 2"
               />
             </div>
