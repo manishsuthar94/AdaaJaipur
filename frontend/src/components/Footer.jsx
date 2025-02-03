@@ -40,8 +40,17 @@ const Footer = () => {
 
       <div>
         <hr />
-        <p className="py-5 text-sm text-center">
+        <p className="pt-5 pb-2 text-sm text-center">
           Copyright 2024@ AdaaJaipur - All Right Reserved.
+        </p>
+        <p className="pb-5 pt-3 text-sm text-center">
+          <Link to={"/terms-of-service"} className="text-blue-600">
+            Terms of Service
+          </Link>{" "}
+          <span className="mr-2 ml-2">|</span>
+          <Link to={"/privacy-policy"} className="text-blue-600">
+            Privacy Policy
+          </Link>
         </p>
       </div>
     </div>
