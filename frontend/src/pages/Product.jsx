@@ -6,6 +6,7 @@ import RelatedProducts from "../components/RelatedProducts";
 import { LuShoppingCart } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import { FiShare2 } from "react-icons/fi"; // Import the share icon
 
 const Product = () => {
   const { productId } = useParams();
@@ -28,6 +29,23 @@ const Product = () => {
   useEffect(() => {
     fetchProductData();
   }, [productId, products]);
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: productData.name,
+          text: `Check out this product: ${productData.name} - ${productData.description}`,
+          url: window.location.href,
+        });
+        console.log("Product shared successfully");
+      } catch (error) {
+        console.error("Error sharing product:", error);
+      }
+    } else {
+      alert("Web Share API is not supported in your browser.");
+    }
+  };
 
   return productData ? (
     <>
@@ -109,6 +127,15 @@ const Product = () => {
                 <FaRegHeart className="w-6 h-6" />
                 <span>ADD TO WISHLIST</span>
               </button>
+
+              {/* Share Button */}
+              <button
+                onClick={handleShare}
+                className="bg-blue-500 text-white px-6 py-3 text-sm sm:text-base font-medium rounded-lg shadow-md hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all w-full sm:w-auto flex items-center justify-center gap-2"
+              >
+                <FiShare2 className="w-6 h-6" />
+                <span>SHARE</span>
+              </button>
             </div>
 
             <hr className="mt-8 sm:w-4/5" />
@@ -154,7 +181,12 @@ const Product = () => {
       </div>
     </>
   ) : (
-    <div className=" opacity-0"></div>
+    <div className="text-center py-20">
+      <h2 className="text-2xl font-semibold text-red-600">Product not found</h2>
+      <p className="text-gray-500 mt-2">
+        The product you are looking for does not exist.
+      </p>
+    </div>
   );
 };
 
