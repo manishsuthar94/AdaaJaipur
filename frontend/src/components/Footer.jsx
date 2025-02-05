@@ -19,13 +19,30 @@ const Footer = () => {
         <div>
           <p className="text-xl font-medium mb-5">COMPANY</p>
           <ul className="flex flex-col gap-1 text-gray-600">
-            <Link to={"/"}>Home</Link>
-            <Link to={"/collection"}>Collection</Link>
-            <Link to="/collection?category=Men">Men</Link>
-            <Link to="/collection?category=Women">Women</Link>
-            <Link to="/collection?category=Kids">Kids</Link>
-            <Link to={"/about"}>About Us</Link>
-            <Link to={"/contact"}>Contact Us</Link>
+            <Link to={"/"} onClick={() => scrollTo(0, 0)}>
+              Home
+            </Link>
+            <Link to={"/collection"} onClick={() => scrollTo(0, 0)}>
+              Collection
+            </Link>
+            <Link to="/collection?category=Men" onClick={() => scrollTo(0, 0)}>
+              Men
+            </Link>
+            <Link
+              to="/collection?category=Women"
+              onClick={() => scrollTo(0, 0)}
+            >
+              Women
+            </Link>
+            <Link to="/collection?category=Kids" onClick={() => scrollTo(0, 0)}>
+              Kids
+            </Link>
+            <Link to={"/about"} onClick={() => scrollTo(0, 0)}>
+              About Us
+            </Link>
+            <Link to={"/contact"} onClick={() => scrollTo(0, 0)}>
+              Contact Us
+            </Link>
           </ul>
         </div>
 
@@ -44,11 +61,19 @@ const Footer = () => {
           Copyright 2024@ AdaaJaipur - All Right Reserved.
         </p>
         <p className="pb-5 pt-3 text-sm text-center">
-          <Link to={"/terms-of-service"} className="text-blue-600">
+          <Link
+            to={"/terms-of-service"}
+            onClick={() => scrollTo(0, 0)}
+            className="text-blue-600"
+          >
             Terms of Service
           </Link>{" "}
           <span className="mr-2 ml-2">|</span>
-          <Link to={"/privacy-policy"} className="text-blue-600">
+          <Link
+            to={"/privacy-policy"}
+            onClick={() => scrollTo(0, 0)}
+            className="text-blue-600"
+          >
             Privacy Policy
           </Link>
         </p>

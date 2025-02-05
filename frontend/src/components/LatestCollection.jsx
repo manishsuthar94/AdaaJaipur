@@ -45,6 +45,7 @@ const LatestCollection = () => {
         <div className="w-full px-4 sm:px-0 text-center mt-14">
           <Link
             to="/collection"
+            onClick={() => scrollTo(0, 0)}
             className="w-full inline-block sm:w-[218px] bg-slate-50 px-[54px] py-4 border-2 rounded-full hover:bg-black hover:text-white text-black transition-all font-medium text-sm sm:text-base border-black/10"
           >
             View All
