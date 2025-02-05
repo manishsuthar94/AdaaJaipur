@@ -15,6 +15,7 @@ const Product = () => {
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
   const [size, setSize] = useState("");
+  const [activeTab, setActiveTab] = useState("description"); // State to manage active tab
 
   const fetchProductData = async () => {
     products.map((item) => {
@@ -46,6 +47,35 @@ const Product = () => {
       alert("Web Share API is not supported in your browser.");
     }
   };
+
+  // Sample reviews data
+  const sampleReviews = [
+    {
+      id: 1,
+      user: "John Doe",
+      rating: 5,
+      comment: "Great product! Very comfortable and fits perfectly.",
+    },
+    {
+      id: 2,
+      user: "Jane Smith",
+      rating: 4,
+      comment:
+        "Good quality, but the color is slightly different from the picture.",
+    },
+    {
+      id: 3,
+      user: "Alice Johnson",
+      rating: 3,
+      comment: "It's okay, but the material could be better.",
+    },
+    {
+      id: 4,
+      user: "John Doe",
+      rating: 2,
+      comment: "Great product! Very comfortable and fits perfectly.",
+    },
+  ];
 
   return productData ? (
     <>
@@ -150,25 +180,67 @@ const Product = () => {
         {/* ---------- Description & Review Section ------------- */}
         <div className="mt-20">
           <div className="flex">
-            <b className="border px-5 py-3 text-sm">Description</b>
-            <p className="border px-5 py-3 text-sm">Reviews (122)</p>
+            <button
+              onClick={() => setActiveTab("description")}
+              className={`border px-5 py-3 text-sm ${
+                activeTab === "description" ? "bg-gray-200" : ""
+              }`}
+            >
+              <b>Description</b>
+            </button>
+            <button
+              onClick={() => setActiveTab("reviews")}
+              className={`border px-5 py-3 text-sm ${
+                activeTab === "reviews" ? "bg-gray-200" : ""
+              }`}
+            >
+              <b>Reviews ({sampleReviews.length})</b>
+            </button>
           </div>
-          <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
-            <p>
-              An e-commerce website is an online platform that facilitates the
-              buying and selling of products or services over the internet. It
-              serves as a virtual marketplace where businesses and individuals
-              can showcase their products, interact with customers, and conduct
-              transactions without the need for a physical presence. E-commerce
-              websites have gained immense popularity due to their convenience,
-              accessibility, and the global reach they offer.
-            </p>
-            <p>
-              E-commerce websites typically display products or services along
-              with detailed descriptions, images, prices, and any available
-              variations (e.g., sizes, colors). Each product usually has its own
-              dedicated page with relevant information.
-            </p>
+          <div className="border px-6 py-6 text-sm text-gray-500">
+            {activeTab === "description" ? (
+              <div className="flex flex-col gap-4">
+                <p>
+                  An e-commerce website is an online platform that facilitates
+                  the buying and selling of products or services over the
+                  internet. It serves as a virtual marketplace where businesses
+                  and individuals can showcase their products, interact with
+                  customers, and conduct transactions without the need for a
+                  physical presence. E-commerce websites have gained immense
+                  popularity due to their convenience, accessibility, and the
+                  global reach they offer.
+                </p>
+                <p>
+                  E-commerce websites typically display products or services
+                  along with detailed descriptions, images, prices, and any
+                  available variations (e.g., sizes, colors). Each product
+                  usually has its own dedicated page with relevant information.
+                </p>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-4">
+                {sampleReviews.map((review) => (
+                  <div key={review.id} className="border-b pb-4">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-base">
+                        {review.user}
+                      </span>
+                      <div className="flex">
+                        {Array.from({ length: review.rating }, (_, i) => (
+                          <img
+                            key={i}
+                            src={assets.star_icon}
+                            alt="star"
+                            className="w-4"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <p className="mt-2 text-base">{review.comment}</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
