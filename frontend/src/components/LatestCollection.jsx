@@ -4,6 +4,7 @@ import Title from "./Title";
 import ProductItem from "./ProductItem";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
+import Timer from "./Timer";
 
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
@@ -52,6 +53,8 @@ const LatestCollection = () => {
           </Link>
         </div>
       </div>
+
+      <Timer />
     </>
   );
 };
