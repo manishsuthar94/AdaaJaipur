@@ -148,119 +148,53 @@ const Collection = () => {
           >
             <p className="mb-3 text-base font-medium">CATEGORIES</p>
             <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
-              <div class="inline-flex items-center">
+              <div className="inline-flex items-center">
                 <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
+                  className="cyberpunk-checkbox-label text-slate-600 text-[16px] p-2"
+                  htmlFor="men-checkbox"
                 >
                   <input
-                    value={"Men"}
+                    type="checkbox"
+                    className="cyberpunk-checkbox"
+                    value="Men"
                     onChange={toggleCategory}
                     checked={category.includes("Men")}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
+                    id="men-checkbox"
                   />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
                   Men
                 </label>
               </div>
 
-              <div class="inline-flex items-center">
+              <div className="inline-flex items-center">
                 <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
+                  className="cyberpunk-checkbox-label text-slate-600 text-[16px] p-2"
+                  htmlFor="women-checkbox"
                 >
                   <input
-                    value={"Women"}
+                    type="checkbox"
+                    className="cyberpunk-checkbox"
+                    value="Women"
                     onChange={toggleCategory}
                     checked={category.includes("Women")}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
+                    id="women-checkbox"
                   />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
                   Women
                 </label>
               </div>
 
-              <div class="inline-flex items-center">
+              <div className="inline-flex items-center">
                 <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
+                  className="cyberpunk-checkbox-label text-slate-600 text-[16px] p-2"
+                  htmlFor="kids-checkbox"
                 >
                   <input
-                    value={"Kids"}
+                    type="checkbox"
+                    className="cyberpunk-checkbox"
+                    value="Kids"
                     onChange={toggleCategory}
                     checked={category.includes("Kids")}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
+                    id="kids-checkbox"
                   />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
                   Kids
                 </label>
               </div>
@@ -275,309 +209,32 @@ const Collection = () => {
             <p className="mb-3 text-base font-medium">TYPE</p>
 
             <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
-              <div class="inline-flex items-center">
-                <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
-                >
-                  <input
-                    value={"Kurta Sets"}
-                    onChange={toggleSubCategory}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
-                  />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
-                  Kurta Sets
-                </label>
-              </div>
-
-              <div class="inline-flex items-center">
-                <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
-                >
-                  <input
-                    value={"Topwear"}
-                    onChange={toggleSubCategory}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
-                  />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
-                  Topwear
-                </label>
-              </div>
-
-              <div class="inline-flex items-center">
-                <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
-                >
-                  <input
-                    value={"Sarees"}
-                    onChange={toggleSubCategory}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
-                  />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
-                  Sarees
-                </label>
-              </div>
-
-              <div class="inline-flex items-center">
-                <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
-                >
-                  <input
-                    value={"Bottomwear"}
-                    onChange={toggleSubCategory}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
-                  />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
-                  Bottomwear
-                </label>
-              </div>
-
-              <div class="inline-flex items-center">
-                <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
-                >
-                  <input
-                    value={"Gowns"}
-                    onChange={toggleSubCategory}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
-                  />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
-                  Gowns
-                </label>
-              </div>
-
-              <div class="inline-flex items-center">
-                <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
-                >
-                  <input
-                    value={"Palazzos"}
-                    onChange={toggleSubCategory}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
-                  />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
-                  Palazzos
-                </label>
-              </div>
-
-              <div class="inline-flex items-center">
-                <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
-                >
-                  <input
-                    value={"Winterwear"}
-                    onChange={toggleSubCategory}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
-                  />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
-                  Winterwear
-                </label>
-              </div>
-
-              <div class="inline-flex items-center">
-                <label
-                  class="relative flex cursor-pointer items-center rounded-full p-2"
-                  for="ripple-on"
-                  data-ripple-dark="true"
-                >
-                  <input
-                    value={"Kurtas"}
-                    onChange={toggleSubCategory}
-                    id="ripple-on"
-                    type="checkbox"
-                    class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
-                  />
-                  <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-3.5 w-3.5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <label
-                  class="cursor-pointer text-slate-600 text-[16px]"
-                  for="ripple-on"
-                >
-                  Kurtas
-                </label>
-              </div>
+              {[
+                "Kurta Sets",
+                "Topwear",
+                "Sarees",
+                "Bottomwear",
+                "Gowns",
+                "Palazzos",
+                "Winterwear",
+                "Kurtas",
+              ].map((item, index) => (
+                <div key={index} className="inline-flex items-center">
+                  <label
+                    className="cyberpunk-checkbox-label text-slate-600 text-[16px] p-2"
+                    htmlFor={`subCategory-${index}`}
+                  >
+                    <input
+                      type="checkbox"
+                      className="cyberpunk-checkbox"
+                      value={item}
+                      onChange={toggleSubCategory}
+                      id={`subCategory-${index}`}
+                    />
+                    {item}
+                  </label>
+                </div>
+              ))}
             </div>
           </div>
         </div>
