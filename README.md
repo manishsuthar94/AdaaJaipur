@@ -110,6 +110,11 @@ Adaa-Jaipur is a comprehensive e-commerce platform designed to provide a seamles
   - View the complete product list.
   - Manage customer orders and update order statuses (e.g., Packing, Shipped, Out for Delivery).
 
+### 11. **Recently Viewed Page**
+
+- Displays the last 4 products recently viewed by the user.
+- Helps users quickly revisit previously browsed products.
+
 ---
 
 ## 🛠️ Admin Credentials:
