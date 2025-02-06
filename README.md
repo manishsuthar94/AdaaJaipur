@@ -150,3 +150,5 @@ Adaa-Jaipur is a comprehensive e-commerce platform designed to provide a seamles
 ---
 
 ### 🚀 Made with ❤️ by **Manish Suthar**
+
+_This website was not built entirely by me alone. I utilized resources from YouTube, Google, and AI to enhance my learning and development process._
