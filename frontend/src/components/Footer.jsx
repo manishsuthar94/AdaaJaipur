@@ -37,6 +37,9 @@ const Footer = () => {
             <Link to="/collection?category=Kids" onClick={() => scrollTo(0, 0)}>
               Kids
             </Link>
+            <Link to="/recently-viewed" onClick={() => scrollTo(0, 0)}>
+              Recently Viewed
+            </Link>
             <Link to={"/about"} onClick={() => scrollTo(0, 0)}>
               About Us
             </Link>

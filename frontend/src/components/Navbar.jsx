@@ -109,6 +109,13 @@ const Navbar = () => {
           >
             <p>KIDS</p>
           </NavLink>
+          <NavLink
+            to="/recently-viewed"
+            className="flex flex-col items-center gap-1"
+          >
+            <p>RECENTLY VIEWED</p>
+            <hr className="w-2/4 border-none h-[1.6px] bg-gray-700 hidden" />
+          </NavLink>
           <NavLink to="/about" className="flex flex-col items-center gap-1">
             <p>ABOUT US</p>
             <hr className="w-2/4 border-none h-[1.6px] bg-gray-700 hidden" />
@@ -248,6 +255,13 @@ const Navbar = () => {
             >
               KIDS
             </Link>
+            <NavLink
+              onClick={() => setVisible(false)}
+              className="py-2 pl-6 border"
+              to="/recently-viewed"
+            >
+              RECENTLY VIEWED
+            </NavLink>
 
             <NavLink
               onClick={() => setVisible(false)}

@@ -19,6 +19,7 @@ import Wishlist from "./pages/Wishlist";
 import PageNotFound from "./pages/PageNotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import RecentlyViewed from "./pages/RecentlyViewed";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="*" element={<PageNotFound />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/recently-viewed" element={<RecentlyViewed />} />
       </Routes>
       <Footer />
     </div>

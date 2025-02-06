@@ -48,6 +48,28 @@ const Product = () => {
     }
   };
 
+  useEffect(() => {
+    if (productData) {
+      // Get the recently viewed products from localStorage
+      const recentlyViewed =
+        JSON.parse(localStorage.getItem("recentlyViewed")) || [];
+
+      // Check if the product is already in the list
+      if (!recentlyViewed.includes(productData._id)) {
+        // Add the new product ID to the list
+        recentlyViewed.unshift(productData._id);
+
+        // Limit the list to the last 5 viewed products
+        if (recentlyViewed.length > 4) {
+          recentlyViewed.pop();
+        }
+
+        // Save the updated list back to localStorage
+        localStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
+      }
+    }
+  }, [productData]);
+
   // Sample reviews data
   const sampleReviews = [
     {
