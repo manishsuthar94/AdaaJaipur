@@ -115,15 +115,6 @@ Adaa-Jaipur is a comprehensive e-commerce platform designed to provide a seamles
 - Displays the last 4 products recently viewed by the user.
 - Helps users quickly revisit previously browsed products.
 
----
-
-## 🛠️ Admin Credentials:
-
-- **Admin URL:** [Admin Panel](https://adaa-jaipur-admin.vercel.app)
-- **Admin Email:** `admin@example.com`
-- **Admin Password:** `admin123`
-
----
 
 ## ⚡ Advanced Features:
 
